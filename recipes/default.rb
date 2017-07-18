@@ -33,6 +33,7 @@ end
 bash "append_to_config" do
   code <<-EOF
     echo "source /opt/liquidprompt/liquidprompt" >> /home/vagrant/.bashrc
+    echo "source /opt/liquidprompt/liquidprompt" >> /home/vagrant/.bash_profile
   EOF
   not_if "grep -Fxq 'liquidprompt' /home/vagrant/.bashrc"
 end
